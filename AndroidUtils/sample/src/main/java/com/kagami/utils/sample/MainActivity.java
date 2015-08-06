@@ -4,8 +4,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
-import com.kagami.utils.app.androidutils.R;
+import com.kagami.utils.lib.app.SingleFragmentActivity;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,6 +15,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SingleFragmentActivity.startFragment(MainActivity.this,DemoFragment.class,"Demo");
+            }
+        });
     }
 
     @Override
