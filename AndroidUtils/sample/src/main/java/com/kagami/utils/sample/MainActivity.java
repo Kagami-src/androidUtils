@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SingleFragmentActivity.startFragment(MainActivity.this,DemoFragment.class,"Demo");
+                SingleFragmentActivity.startFragment(MainActivity.this,SRFragment.class,"Demo");
             }
         });
     }
